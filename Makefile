@@ -2,6 +2,7 @@
 
 all:
 	@echo "trust no AI"
+	java -jar app.jar
 
 compile:
 	mkdir -p bin
