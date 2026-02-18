@@ -10,7 +10,7 @@ compile:
 jar: compile
 	jar cfe app.jar Main -C bin .
 
-run: jar
+run:
 	java -jar app.jar
 
 clean:
