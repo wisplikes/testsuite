@@ -1,10 +1,17 @@
-.PHONY: all run clean
+.PHONY: all compile jar run clean
 
 all:
 	@echo "trust no AI"
 
-run:
-	python3 src/main.py
+compile:
+	mkdir -p bin
+	javac src/Main.java -d bin
+
+jar: compile
+	jar cfe app.jar Main -C bin .
+
+run: jar
+	java -jar app.jar
 
 clean:
-	@echo "Cleaning up..."
+	rm -rf bin app.jar
