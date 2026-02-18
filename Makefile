@@ -1,10 +1,10 @@
 .PHONY: all run clean
 
 all:
-	java -jar Main.jar
+	java -jar app.jar
 
 run:
-	java -jar Main.jar
+	java -jar app.jar
 
 clean:
-	rm -rf bin Main.jar
+	rm -rf bin app.jar
